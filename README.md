@@ -22,13 +22,12 @@ In a Beolink multiroom setup, several rooms share one bus and one Master unit. I
 
 ## Hardware
 
-Runs on an [M5Stack Atom](https://docs.m5stack.com/en/core/atom) with a small character LCD attached over I2C — compact enough to sit anywhere near the bus wiring.
+Runs on either an [M5Stack Atom](https://docs.m5stack.com/en/core/atom) with a small character LCD attached over I2C, or an [M5Stack Core2](https://docs.m5stack.com/en/core/core2) using its own built-in color screen. Both only need to be connected to the bus's data line and ground — same tap point as any other Beolink device.
 
 <p align="center">
-  <img src="docs/atom-module.jpeg" width="500" alt="M5Stack Atom module mounted on the receiver board">
+  <img src="docs/atom-module.jpeg" width="400" alt="M5Stack Atom module mounted on the receiver board">
+  <img src="docs/core2-display.jpg" width="400" alt="M5Stack Core2 showing '42  RADIO  1'">
 </p>
-
-It only needs to be connected to the bus's data line and ground — same tap point as any other Beolink device.
 
 ## Status
 
@@ -41,7 +40,7 @@ It only needs to be connected to the bus's data line and ground — same tap poi
 Requires [PlatformIO](https://platformio.org/).
 
 ```bash
-pio run -e m5stack-atom              # build
+pio run -e m5stack-atom              # or m5stack-core2 - build
 pio run -e m5stack-atom -t upload    # flash
 pio device monitor                   # serial log (115200 baud)
 ```

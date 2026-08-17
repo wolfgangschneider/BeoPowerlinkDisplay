@@ -183,7 +183,7 @@ void DisplayBase::SetSound(String bin,unsigned int type, unsigned int subtype, u
         if(value ==0)
             sprintf(output,"    %-10s__",txt );
         else 
-            sprintf(output,"    %-10s%+2d",txt , (char)value); 
+            sprintf(output,"    %-10s%+2d",txt , (int8_t)value);
 
         PrintInfo(output);
         return;
@@ -265,7 +265,7 @@ void DisplayBase::SetSound_Org(String bin,unsigned int type, unsigned int subtyp
         if(value ==0)
             sprintf(output,"    %-10s__",txt );
         else 
-            sprintf(output,"    %-10s%+2d",txt , (char)value); 
+            sprintf(output,"    %-10s%+2d",txt , (int8_t)value);
         
     }
     PrintInfo(output);

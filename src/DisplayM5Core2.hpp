@@ -1,7 +1,7 @@
 
 #include "DisplayBase.hpp"
 
-#include "M5Core2.h"
+#include "M5Unified.h"
 
 class DisplayM5Core2 : public DisplayBase
 {
